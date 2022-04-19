@@ -17,11 +17,18 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 }
 
 function validateInput(testInput) {
-   
+   if (testInput === "") {
+       return "Empty"
+   }
+   else if (isNaN(testInput) === true) {
+       return "Not a Number"
+   }
+   else return "Is a Number"
 }
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
    
+    
 }
 
 async function myFetch() {
@@ -35,6 +42,16 @@ async function myFetch() {
 
 function pickPlanet(planets) {
 }
+
+//code i'm trying with braden and shawn
+//must be called inside load event listener
+// let form = document.querySelector("form")
+// form.addEventListener("submit", function(){
+//     alert("submit clicked");
+// });
+
+
+
 
 module.exports.addDestinationInfo = addDestinationInfo;
 module.exports.validateInput = validateInput;
