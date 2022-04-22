@@ -20,7 +20,7 @@ function validateInput(testInput) {
    if (testInput === "") {
        return "Empty"
    }
-   else if (isNaN(testInput) === true) {
+   else if (isNaN(testInput)) {
        return "Not a Number"
    }
    else return "Is a Number"
@@ -34,7 +34,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 async function myFetch() {
     let planetsReturned;
 
-    planetsReturned = await fetch().then( function(response) {
+    planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
         });
 
     return planetsReturned;
@@ -43,12 +43,7 @@ async function myFetch() {
 function pickPlanet(planets) {
 }
 
-//code i'm trying with braden and shawn
-//must be called inside load event listener
-// let form = document.querySelector("form")
-// form.addEventListener("submit", function(){
-//     alert("submit clicked");
-// });
+
 
 
 
